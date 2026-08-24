@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh Giá Từ Khách Hàng</title>
+</head>
+<body>
+<form action="cam_on.html" method="get">
+    <h1 style="background: linear-gradient(to right, #ff9a9e, #fad0c4);">Bản Điền Đánh Giá Từ Người Dùng</h1>
+    <p style="color: brown;">Đánh giá của bạn có thể giúp doanh nghiệp cải thiện sản phẩm và khắc phục các
+        lỗi không mong muốn</p>
+    <label for="tuoi">Tuổi Của Bạn:</label>
+    <input type="number" min="16" name="tuoi" id="tuoi" max="110" required><br>
+    <label for="thunhap">Thu Nhập Hằng Tháng:(Triệu Đồng)</label>
+    <input name="thunhap" id="thunhap" type="number" min="1" placeholder="VND"><br>
+    <label>Giới Tính:</label><br>
+    <input type="radio" name="gender" value="Nam">Nam</input>
+    <br>
+    <input type="radio" name="gender" value="Nữ">Nữ</input>
+    <br>
+    <label><p>Bạn đã từng trãi nghiệm những sản phẩm nào trước đây?</p></label>
+    <input type="checkbox" value="mat_hang">
+    <label>Mặt hàng 1</label>
+    <br>
+    <input type="checkbox" value="mat_hang">
+    <label>Mặt hàng 2</label>
+    <br>
+    <input type="checkbox" value="mat_hang">
+    <label>Mặt hàng 3</label>
+    <br>
+    <label><p>Bạn sử dụng sản phẩm của chúng tôi như thế nào?</p></label>
+    <input type="checkbox" value="su_dung">
+    <label>Hằng Ngày</label>
+    <br>
+    <input type="checkbox" value="su_dung">
+    <label>Hằng Tuần</label>
+    <br>
+    <input type="checkbox" value="su_dung">
+    <label>Hằng Tháng</label>
+    <br>
+    <label><p>Bạn dự định sẽ chi bao nhiêu cho mặt hàng mới?</p></label>
+    <input type="number" placeholder="VND" min="10000" name="vnd" id="vnd" max="1000000"><br>
+    <label><p>Bạn mong muốn điều gì ở sản phẩm mới?</p></label>
+    <br>
+    <textarea placeholder="Nhập tiện ích bạn muốn tại đây...."></textarea>
+    <br>
+    <label>Bạn đánh giá sản phẩm của chúng tôi ở mức độ nào?</label>
+    <br>
+    Hài Lòng
+    <input type="radio" name="danh_gia" value="1">
+    <br>
+    Bình Thường
+    <input type="radio" name="danh_gia" value="2">
+    <br>
+    Có Khuyết Điểm
+    <input type="radio" name="danh_gia" value="3">
+    <br>
+    Không Hài Lòng
+    <input type="radio" name="danh_gia" value="4">
+    <br>
+    <button type="submit">Gửi Đánh Giá</button>
+</form>
+
+</body>
+</html>
