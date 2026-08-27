@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm Trung Bình</title>
+</head>
+<body>
+<script>
+    let diemToan = Number(prompt("Nhap diem toan cua ban:"));
+    while (diemToan < 1 || diemToan > 10) {
+        alert("Điểm phải nằm trong khoảng từ 1 đến 10");
+        diemToan = Number(prompt("Nhập lại điểm Toán:"));
+    }
+    let diemLy = Number(prompt("Nhap diem ly cua ban:"));
+    while (diemLy < 1 || diemLy > 10) {
+        alert("Điểm phải nằm trong khoảng từ 1 đến 10");
+        diemLy = Number(prompt("Nhập lại điểm Lý:"));
+    }
+    let diemHoa = Number(prompt("Nhap diem hoa cua ban:"));
+    while (diemHoa < 1 || diemHoa > 10) {
+        alert("Điểm phải nằm trong khoảng từ 1 đến 10");
+        diemHoa = Number(prompt("Nhập lại điểm Hóa:"));
+    }
+    let diemTrungBinh = (diemToan + diemLy + diemHoa) / 3;
+    document.write('diem toan=' + diemToan +"<br>");
+    document.write('diem ly=' + diemLy +"<br>");
+    document.write('diem hoa=' + diemHoa +"<br>");
+    document.write('diem trung binh=' + diemTrungBinh);
+</script>
+</body>
+</html>
