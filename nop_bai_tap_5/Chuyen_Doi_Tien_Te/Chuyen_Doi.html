@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body style="text-align: center">
+<h1>Chuyển đổi tiền tệ</h1>
+<p>Chọn loại tiền tệ muốn chuyển đổi</p>
+<select id="loaiTienDoi">
+    <option value="VNDvao">Tiền Việt</option>
+    <option value="USDvao">Đô La</option>
+</select>
+<input placeholder="Nhập số tiền cần chuyển đổi" id="nhapVao">
+<p>loại tiền muốn chuyển thành:</p>
+<select id="loaiTienThanh">
+    <option value="VNDra">Tiền Việt</option>
+    <option value="USDra">Đô La</option>
+</select>
+<p id="xuatRa"></p>
+<button onclick="chuyenDoi()">Chuyển đổi</button>
+<script>
+    function chuyenDoi() {
+        let nhapvao = Number(document.getElementById("nhapVao").value);
+        let loaiTienDoi = document.getElementById("loaiTienDoi").value;
+        let loaiTienThanh = document.getElementById("loaiTienThanh").value;
+        if (loaiTienDoi == "VNDvao" && loaiTienThanh == "VNDra") {
+            document.getElementById("xuatRa").innerHTML = "VND=" + nhapvao;
+        }
+        if (loaiTienDoi == "USDvao" && loaiTienThanh == "USDra") {
+            document.getElementById("xuatRa").innerHTML = "USD=" + nhapvao;
+        }
+        if (loaiTienDoi == "VNDvao" && loaiTienThanh == "USDra") {
+            let VNDsangUSD = nhapvao / 26000;
+            document.getElementById("xuatRa").innerHTML = "USD=" + VNDsangUSD;
+        }
+        if (loaiTienDoi == "USDvao" && loaiTienThanh == "VNDra") {
+            let USDsangVND = nhapvao * 26000;
+            document.getElementById("xuatRa").innerHTML = "VND=" + USDsangVND;
+        }
+    }
+</script>
+</body>
+</html>

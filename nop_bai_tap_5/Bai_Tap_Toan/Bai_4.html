@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Chu Vi Hình Tròn</title>
+</head>
+<body style="text-align: center; border: #030C14">
+<h1>Tính Chu Vi Hình Tròn</h1>
+<input id="R" placeholder="nhập bán kính">
+<button onclick="tinhChuVi()">tính</button>
+<p id="ketqua"></p>
+<script>
+    function tinhChuVi() {
+        let banKinh = document.getElementById('R').value;
+        let chuVi = banKinh * 2 * Math.PI;
+        document.getElementById('ketqua').innerHTML = "Chu vi của hình tròn là:" + chuVi;
+    }
+</script>
+</body>
+</html>

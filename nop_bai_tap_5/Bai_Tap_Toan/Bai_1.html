@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Trung Bình/Tổng điểm</title>
+</head>
+<body>
+<script>
+    let diemToan = Number(prompt("Nhap diem Toan cua ban:"));
+    while (diemToan >= 10 || diemToan <= 0) {
+        alert("Diem toan phai nam trong pham vi 10-0")
+        diemToan = Number(prompt("Nhap lai diem Toan cua ban:"));
+    }
+    let diemLy = Number(prompt("Nhap diem Ly cua ban:"));
+    while (diemLy >= 10 || diemLy <= 0) {
+        alert("Diem Ly phai nam trong pham vi 10-0")
+        diemLy = Number(prompt("Nhap lai diem Ly cua ban:"));
+    }
+    let diemHoa = Number(prompt("Nhap diem Hoa cua ban:"));
+    while (diemHoa >= 10 || diemHoa <= 0) {
+        alert("Diem Hoa phai nam trong pham vi 10-0")
+        diemHoa = Number(prompt("Nhap lai diem Hoa cua ban:"));
+    }
+    let diemAnh = Number(prompt("Nhap diem Anh cua ban:"));
+    while (diemAnh >= 10 || diemAnh <= 0) {
+        alert("Diem anh phai nam trong pham vi 10-0")
+        diemAnh = Number(prompt("Nhap lai diem Anh cua ban:"));
+    }
+    let diemVan = Number(prompt("Nhap diem Van cua ban:"));
+    while (diemVan >= 10 || diemVan <= 0) {
+        alert("Diem van phai nam trong pham vi 10-0:");
+        diemVan = Number(prompt("Nhap lai diem Van cua ban:"));
+    }
+    let diemTong = diemToan + diemLy + diemHoa + diemVan + diemAnh;
+    let diemTrungBinh = diemTong / 5;
+    document.write("diem toan=" + diemToan + "diem <br>");
+    document.write("diem ly=" + diemLy + "diem <br>");
+    document.write("diem hoa=" + diemHoa + "diem <br>");
+    document.write("diem van=" + diemVan + "diem <br>");
+    document.write("diem anh=" + diemAnh + "diem <br>");
+    document.write("diem tong= " + diemTong + "diem <br>");
+    document.write("diem trung binh=" + diemTrungBinh + "diem <br>");
+</script>
+</body>
+</html>

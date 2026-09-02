@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện Tích Hình Tròn</title>
+</head>
+<body style="text-align: center; border: #030C14">
+<h1>Tính Diện Tích Hình Tròn</h1>
+<input id="R" placeholder="nhập bán kính">
+<button onclick="tinhDienTich()">tính</button>
+<p id="ketqua"></p>
+<script>
+    function tinhDienTich() {
+        let banKinh = document.getElementById('R').value;
+        let DienTich = banKinh * banKinh * Math.PI;
+        document.getElementById('ketqua').innerHTML = "Diện tích của hình tròn là:" + DienTich;
+    }
+</script>
+</body>
+</html>
