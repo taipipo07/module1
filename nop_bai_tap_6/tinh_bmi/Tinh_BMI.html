@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Chỉ Số BMI</title>
+</head>
+<body style="text-align: center">
+<h1>Tính BMI</h1>
+<input placeholder="nhập chiều cao của bạn(cm)" id="H" min="0">
+<input placeholder="nhập cân nặng của bạn(kg)" id="W" min="0">
+<button onclick="tinhBMI()">tính BMI</button>
+<p id="ketqua" style="border: 5px solid red; border-radius: 10px" ></p>
+<script>
+    function tinhBMI() {
+        let chieuCao = document.getElementById('H').value;
+        let canNang = document.getElementById('W').value;
+        let BMI = canNang / (chieuCao * chieuCao) * 10000;
+        if (BMI < 18.5) {
+            document.getElementById('ketqua').innerHTML = "Chỉ số BMI của bạn là:" + BMI + "Underweight";
+        } else if (BMI < 25.0) {
+            document.getElementById('ketqua').innerHTML = "Chỉ số BMI của bạn là:" + BMI + "(Normal)";
+        } else if (BMI < 30.0) {
+            document.getElementById('ketqua').innerHTML = "Chỉ số BMI của bạn là:" + BMI + "(Overweight)";
+        } else {
+            document.getElementById('ketqua').innerHTML = "Chỉ số BMI của bạn là:" + BMI + "(Obese)";
+        }
+    }
+</script>
+</body>
+</html>
