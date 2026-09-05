@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Max</title>
+</head>
+<body>
+<h1>Tìm MAX:</h1>
+<input id="soNguyenA" type="number" placeholder="Nhập số Nguyên a">
+<input id="soNguyenB" type="number" placeholder="Nhập số Nguyên b">
+<input id="soNguyenC" type="number" placeholder="Nhập số Nguyên c">
+<button onclick="kiemTra()">Tìm max</button>
+<br>
+<p id="ketqua"></p>
+<script>
+    function kiemTra() {
+        let a = Number(document.getElementById("soNguyenA").value);
+        let b = Number(document.getElementById("soNguyenB").value);
+        let c = Number(document.getElementById("soNguyenC").value);
+        if (a > b && a > c) {
+            document.getElementById("ketqua").innerHTML = "a là số lớn nhất";
+        } else if (a > b && a < c) {
+            document.getElementById("ketqua").innerHTML = "c là số lớn nhất";
+        } else if (a < b && a > c) {
+            document.getElementById("ketqua").innerHTML = "b là số lớn nhất";
+        } else if (b < c) {
+            document.getElementById("ketqua").innerHTML = "c là số lớn nhất";
+        } else if (a === b || a === c) {
+            document.getElementById("ketqua").innerHTML = "a là số lớn nhất";
+        } else if (a === b || b === c) {
+            document.getElementById("ketqua").innerHTML = "b là số lớn nhất";
+        } else if (c < b) {
+            document.getElementById("ketqua").innerHTML = "b là số lớn nhất";
+        } else {
+            document.getElementById("ketqua").innerHTML = "3 số bằng nhau";
+        }
+    }
+</script>
+</body>
+</html>

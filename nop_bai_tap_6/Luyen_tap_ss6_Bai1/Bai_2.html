@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Độ Tuổi</title>
+</head>
+<body style="text-align: center">
+<h1>Nhập Tuổi Của Bạn</h1>
+<input placeholder="tuổi" id="tuoi" type="number" min="0">
+<button onclick="kiemTra()">kiểm tra</button>
+<br>
+<p id="ketqua"></p>
+<script>
+    function kiemTra() {
+        let old = document.getElementById("tuoi").value;
+        if (old >= 15) {
+            document.getElementById("ketqua").innerHTML = "Bạn đủ tuổi để học lớp 10";
+        } else {
+            document.getElementById("ketqua").innerHTML = "Bạn chưa đủ tuổi học lớp 10";
+        }
+    }
+</script>
+</body>
+</html>

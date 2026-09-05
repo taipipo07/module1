@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh Giá Học Lực</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>Bản Đánh Giá Năng Lực Sinh Viên:</h1>
+<input id="diemThuongKy" placeholder="Nhập điểm thường kỳ" type="number" min="0" max="10" step="0.01"
+       style="width: 500px;">
+<br>
+<input id="diemGiuaKy" placeholder="Nhập điểm Giữa kỳ" type="number" min="0" max="10" step="0.01" style="width: 500px;">
+<br>
+<input id="diemCuoiKy" placeholder="Nhập điểm Cuối kỳ" type="number" min="0" max="10" step="0.01" style="width: 500px;">
+<br>
+<button onclick="danhGia()">Kiểm Tra Học Lực</button>
+<br>
+<p id="ketqua"></p>
+<script>
+    function danhGia() {
+        let tK = Number(document.getElementById("diemThuongKy").value);
+        let gK = Number(document.getElementById("diemGiuaKy").value) * 2;
+        let cK = Number(document.getElementById("diemCuoiKy").value) * 3;
+        let diemTB = (tK + gK + cK) / 5;
+        if (diemTB <= 3) {
+            document.getElementById("ketqua").innerHTML = "điểm học lực của bạn là:" + diemTB + "(Bạn thuộc loại Yếu)";
+        } else if (diemTB <= 5) {
+            document.getElementById("ketqua").innerHTML = "điểm học lực của bạn là:" + diemTB + "(Bạn thuộc loại Trung Bình)";
+        } else if (diemTB <= 7) {
+            document.getElementById("ketqua").innerHTML = "điểm học lực của bạn là:" + diemTB + "(Bạn thuộc loại Khá)";
+        } else if (diemTB <= 9) {
+            document.getElementById("ketqua").innerHTML = "điểm học lực của bạn là:" + diemTB + "(Bạn thuộc loại Giỏi)";
+        } else {
+            document.getElementById("ketqua").innerHTML = "điểm học lực của bạn là:" + diemTB + "(Bạn thuộc loại Xuất Sắc)";
+        }
+    }
+</script>
+</body>
+</html>

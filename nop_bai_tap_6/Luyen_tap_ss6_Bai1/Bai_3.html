@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Số Nguyên</title>
+</head>
+<body>
+<h1>Nhập số nguyên để kiểm tra</h1>
+<input id="soNguyen" type="number" placeholder="nhập số nguyên bất kì">
+<button onclick="kiemTra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemTra() {
+        let Z = Number(document.getElementById('soNguyen').value);
+        if (Z > 0) {
+            document.getElementById('ketqua').innerHTML = "Đây là số nguyên dương(lớn hơn 0)";
+        }
+        if (Z === 0) {
+            document.getElementById('ketqua').innerHTML = "Không thể xác định giá trị số nguyên";
+        }
+        if (Z < 0) {
+            document.getElementById('ketqua').innerHTML = "Đây là số nguyên âm(nhỏ hơn 0)";
+        }
+
+    }
+</script>
+</body>
+</html>

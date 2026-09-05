@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hoa Hồng</title>
+</head>
+<body>
+<h1>Kiểm Tra Hoa Hồng Trong Tháng:</h1>
+<input id="doanhSo" placeholder="Nhập doanh số của tháng(triệu đồng)" type="number" style="width: 400px;" step="0.01">
+<button onclick="kTra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kTra() {
+        let dSo= Number(document.getElementById("doanhSo").value);
+        if (dSo<=10) {
+        document.getElementById("ketqua").innerHTML ="Không có hoa hồng cho tháng này";
+        }
+        else if (dSo<=20) {
+                document.getElementById("ketqua").innerHTML ="Hoa hồng tháng này của bạn là:"+ dSo*10/100+"(triệu đồng)";
+        }
+        else if (dSo<=50) {
+                document.getElementById("ketqua").innerHTML ="Hoa hồng tháng này của bạn là:"+ dSo*15/100+"(triệu đồng)";
+        }
+        else{
+                document.getElementById("ketqua").innerHTML ="Hoa hồng tháng này của bạn là:"+ dSo*20/100+"(triệu đồng)";
+        }
+    }
+</script>
+</body>
+</html>
