@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tiền Cước Gọi</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>Tính Phí Cước Gọi Hằng Tháng:</h1>
+<input id="soPhut" placeholder="nhập số phút gọi của bạn" min="0" type="number" style="width: 400px">
+<br>
+<select id="loaiCuocGoi">
+    <option id="noiMang" value="1000">Nội Mạng</option>
+    <option id="ngoaiMang" value="1200">Ngoại Mạng</option>
+    <option id="quocTe" value="2000">Quốc Tế</option>
+</select>
+<select id="loaiThueBao">
+    <option id="traTruoc" value="1">Trả Trước</option>
+    <option id="traSau" value="0.95">Trả Sau</option>
+</select>
+<select id="khungGio">
+    <option id="gioCaoDiem" value="1.01">Giờ Cao Điểm</option>
+    <option id="gioThuong" value="1">Giờ thường</option>
+    <option id="gioUuDai" value="0.98">Giờ Ưu Đãi</option>
+</select>
+<select id="thanhToan">
+    <option id="tienMat" value="1">Tiền Mặt</option>
+    <option id="chuyenKhoan" value="0.99">Chuyển khoản</option>
+    <option id="viDienTu" value="0.98">Ví Điện Tử</option>
+</select>
+<button onclick="tinhTien()">Tổng tiền phải trả</button>
+<p id="ketqua"></p>
+<script>
+    function tinhTien() {
+    let loaiCuoc=document.getElementById('loaiCuocGoi').value;
+    let thueBao=document.getElementById('loaiThueBao').value;
+    let gio=document.getElementById('khungGio').value;
+    let tToan=document.getElementById('thanhToan').value;
+    let soPhut=document.getElementById('soPhut').value;
+    let tTien=(soPhut*loaiCuoc);
+    let chiTra=tTien-tTien*(3-thueBao-gio-tToan);
+    document.getElementById('ketqua').innerHTML ="Số tiền phải trả là:"+chiTra+"VND";
+    }
+</script>
+</body>
+</html>

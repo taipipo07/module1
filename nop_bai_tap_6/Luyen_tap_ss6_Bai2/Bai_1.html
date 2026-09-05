@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Độ</title>
+</head>
+<body>
+<p>Nhập Độ C:</p><input type="number" id="C"><br>
+<button onclick="tinhDoF()">Chuyển Đổi</button>
+<p id="ketQua"></p>
+<script>
+    function tinhDoF() {
+        let doC = document.getElementById('C').value;
+        let doF = doC * 9 / 5 + 32;
+        document.getElementById('ketQua').innerHTML = "độ F=" + doF;
+    }
+</script>
+</body>
+</html>

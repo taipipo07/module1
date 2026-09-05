@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Vuông</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>Tính Diện Tích Hình Vuông</h1>
+<input id="canhHinhVuong" placeholder="Nhập cạnh(cm)" type="number" style="width: 400px;" step="0.01">
+<button onclick="tinh()">Tính diện tích hình vuông</button>
+<p id="ketqua"></p>
+<script>
+    function tinh() {
+        let canhA=Number(document.getElementById('canhHinhVuong').value);
+        let dienTich= canhA*canhA;
+        document.getElementById('ketqua').innerHTML="Diện Tích hình vuông cần tính là:"+dienTich+"cm^3";
+    }
+</script>
+</body>
+</html>

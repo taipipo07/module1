@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>Chuyển Độ Dài</h1>
+<input id="doF" placeholder="Nhập chiều dài ft muốn quy đổi sang m" type="number" style="width: 400px;" step="0.01">
+<button onclick="tinh()">Chuyển đổi ft-m</button>
+<p id="ketqua"></p>
+<script>
+    function tinh() {
+        let fT=document.getElementById("doF").value;
+        let chuyenDoi= fT/3.2808;
+        document.getElementById("ketqua").innerHTML=fT+"(ft)="+chuyenDoi+"(m)";
+    }
+</script>
+
+</body>
+</html>
