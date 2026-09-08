@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện Tích HCN</title>
+</head>
+<body>
+<h1>S Hình Chữ Nhật</h1>
+<input placeholder="Nhập chiều dài(cm)" type="number" style="width: 400px;" step="0.01" id="a">
+<br>
+<input placeholder="Nhập chiều rộng(cm)" type="number" style="width: 400px;" step="0.01" id="b">
+<br>
+<button onclick="tinh()">tính diện tích</button>
+<p id="ketqua"></p>
+<script>
+    function tinh() {
+        let chieuDai = document.getElementById('a').value;
+        let chieuRong = document.getElementById('b').value;
+        let dienTich = chieuDai * chieuRong;
+        document.getElementById("ketqua").innerHTML = "S=" + dienTich + "(cm^3)";
+    }
+</script>
+</body>
+</html>

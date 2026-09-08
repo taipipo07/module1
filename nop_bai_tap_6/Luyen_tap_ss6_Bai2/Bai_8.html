@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Vuông</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>Kiểm Tra Dữ Liệu</h1>
+<input id="kiemTraTuoi" placeholder="Số cần kiểm tra" type="number" style="width: 400px;">
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemTra() {
+        let tuoi = document.getElementById('kiemTraTuoi').value;
+        if (tuoi > 0 && tuoi < 120) {
+            document.getElementById("ketqua").innerHTML = "Đây là tuổi của một người"
+        } else {
+            document.getElementById("ketqua").innerHTML = "Đây không phải tuổi của một người"
+        }
+    }
+</script>
+</body>
+</html>

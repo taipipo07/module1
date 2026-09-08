@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Cạnh Tam Giác</title>
+</head>
+<body style="text-align: center;border: 10px double black; margin: 50px; width: 700px;">
+<h1>kiểm Tra Cạnh Tam Giác</h1>
+<input id="canhTamGiacA" placeholder="Nhập cạnh(cm)" type="number" style="width: 400px;" step="0.01">
+<input id="canhTamGiacB" placeholder="Nhập cạnh(cm)" type="number" style="width: 400px;" step="0.01">
+<input id="canhTamGiacC" placeholder="Nhập cạnh(cm)" type="number" style="width: 400px;" step="0.01">
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemTra() {
+        let canhA = Number(document.getElementById('canhTamGiacA').value);
+        let canhB = Number(document.getElementById('canhTamGiacB').value);
+        let canhC = Number(document.getElementById('canhTamGiacC').value);
+        if (canhA > 0 && canhB > 0 && canhC > 0 && canhA + canhB > canhC && canhC + canhB > canhA && canhA + canhC > canhB) {
+            document.getElementById('ketqua').innerHTML = "3 cạnh trên là cạnh của một tam giác";
+        } else {
+            document.getElementById('ketqua').innerHTML = "3 cạnh trên không phải cạnh của một tam giác";
+        }
+    }
+</script>
+</body>
+</html>
