@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai Thừa Một Số Nguyên Dương</title>
+</head>
+<body>
+<input id="soGiaiThua" type="number" placeholder="nhập số nguyên dương bạn muốn giai thừa"
+       style="text-align: center ; width:300px ; border: 2px dashed;" min="0" step="1">
+<button onclick="tinhGiaiThua()">tính giai thừa</button>
+<p id="ketQua"></p>
+<script>
+    function tinhGiaiThua() {
+        let i;
+        let tichCacSo=1;
+        let soCanTinh= document.getElementById("soGiaiThua").value;;
+        for(i = 1; i <=soCanTinh; i++) {
+            tichCacSo= i*tichCacSo;
+        }
+        document.getElementById("ketQua").innerHTML = "Giai thừa của "+soCanTinh+" là:"+tichCacSo;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình Chữ Nhật</title>
+</head>
+<body>
+<table id="inChuNhat">
+</table>
+<script>
+    let html="";
+    for(let i = 1; i<=10;i++){
+        html+="<tr>";
+        for(let j = 1; j<=20;j++){
+            if(j===1||j===20){
+                html+="<td>"+"*"+"</td>";
+            }
+            if(i===1||i===10){
+                html+="<td>"+"*"+"</td>";
+            }
+            else{
+                html+="<td>"+""+"</td>";
+            }
+        }
+        html+="</tr>";
+    }
+    document.getElementById("inChuNhat").innerHTML=html;
+</script>
+</body>
+</html>

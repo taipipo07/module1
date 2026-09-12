@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bé Tập Đếm</title>
+</head>
+<body>
+<button onclick="demSo()">Bé tập đếm</button>
+<p id="ketQua"></p>
+<p id="ketQuaa"></p>
+<script>
+    function demSo() {
+        let i;
+        for(i=1;i<100;i++){
+            document.getElementById("ketQua").innerHTML+= i+""+",";
+            document.getElementById("ketQuaa").innerHTML= "Đã Hoàn Thành";
+        }
+    }
+</script>
+</body>
+</html>

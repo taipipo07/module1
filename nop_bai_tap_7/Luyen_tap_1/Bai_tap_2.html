@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Nhiệt Độ</title>
+</head>
+<body>
+<script>
+    let nhietDo= Number(prompt("Nhập nhiệt độ hiện tại"));
+    while(nhietDo <= 20) {
+        alert("Cần tăng nhiệt độ!");
+        nhietDo=Number(prompt("Nhập lại nhiệt độ hiện tại"));
+    }
+    while(nhietDo >=100) {
+        alert("Cần giảm nhiệt độ!");
+        nhietDo=Number(prompt("Nhập lại nhiệt độ hiện tại"));
+    }
+</script>
+<p>Nhiệt độ phù hợp!</p>
+</body>
+</html>

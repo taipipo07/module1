@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Hình Tam Giác</title>
+</head>
+<body>
+<table   id="inTamGiac">
+</table>
+<script>
+    let html="";
+    for(let i = 1; i<=5;i++){
+        html+="<tr>";
+        for(let j = 1; j<=i;j++){
+            html+="<td>"+"*"+"</td>";
+        }
+        html+="</tr>";
+    }
+    document.getElementById("inTamGiac").innerHTML=html;
+</script>
+<br>
+<table   id="inTamGiac2">
+</table>
+<script>
+    let html2="";
+    for(let i = 5; i>=1;i--){
+        html2+="<tr>";
+        for(let j = 1; j<=i;j++){
+            html2+="<td>"+"*"+"</td>";
+        }
+        html2+="</tr>";
+    }
+    document.getElementById("inTamGiac2").innerHTML=html2;
+</script>
+<br>
+<table   id="inTamGiac3">
+</table>
+<script>
+    let html3="";
+    for(let i = 1; i<=5;i++){
+        html3+="<tr>";
+        for(let j = 2; j<=i;j++){
+            html3+="<td></td>";
+        }
+        for(let k=5; k>=i;k--){
+            html3+="<td>"+"*"+"</td>";
+        }
+        html3+="</tr>";
+    }
+    document.getElementById("inTamGiac3").innerHTML=html3;
+</script>
+<br>
+<table   id="inTamGiac4">
+</table>
+<script>
+    let html4="";
+    for(let i = 5; i>=1;i--){
+        html4+="<tr>";
+        for(let j = 1; j<=i;j++){
+            html4+="<td></td>";
+        }
+        for(let k=1; k<=i;k++){
+            html4+="<td>"+"*"+"</td>";
+        }
+        html4+="</tr>";
+    }
+    document.getElementById("inTamGiac4").innerHTML=html4;
+</script>
+</body>
+</html>

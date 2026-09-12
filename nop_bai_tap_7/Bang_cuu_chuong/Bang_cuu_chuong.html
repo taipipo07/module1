@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bản Cửu Chương</title>
+</head>
+<body>
+<h1>Bản Cửu Chương</h1>
+<table border="1" id="bangCuuChuong">
+</table>
+<script>
+    let html = "";
+    for (let i = 1; i <= 10; i++) {
+        html += "<tr>";
+        for (let j = 1; j <= 10; j++) {
+            html += "<td>" + i + "×" + j + "=" + (i * j) + "</td>";
+        }
+        html += "</tr>";
+    }
+    document.getElementById("bangCuuChuong").innerHTML = html;
+</script>
+</body>
+</html>
